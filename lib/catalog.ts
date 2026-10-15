@@ -11,137 +11,134 @@ export type Title = {
   description: string
 }
 
+export const typeLabel: Record<Title['type'], string> = {
+  Movie: 'فيلم',
+  Series: 'مسلسل',
+}
+
 export const SAMPLE_VIDEO =
   'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
 
 export const featured: Title = {
   id: 'red-horizon',
-  name: 'Red Horizon',
+  name: 'الأفق الأحمر',
   image: '/images/hero.png',
   year: 2026,
-  rating: '13+',
-  duration: '2h 14m',
+  rating: '+13',
+  duration: '2 س 14 د',
   match: 98,
-  genres: ['Sci-Fi', 'Adventure', 'Drama'],
+  genres: ['خيال علمي', 'مغامرة', 'دراما'],
   type: 'Movie',
   description:
-    'Stranded on a dying desert world, a lone explorer must decide whether to signal home or follow a mysterious light toward the ringed giant on the horizon.',
+    'عالق على كوكب صحراوي يحتضر، على مستكشف وحيد أن يقرر: هل يرسل إشارة إلى الوطن، أم يتبع ضوءًا غامضًا نحو الكوكب العملاق ذي الحلقات في الأفق؟',
 }
 
 export const titles: Title[] = [
   {
     id: 'neon-rain',
-    name: 'Neon Rain',
+    name: 'مطر النيون',
     image: '/images/p1.png',
     year: 2025,
-    rating: '16+',
-    duration: '3 Seasons',
+    rating: '+16',
+    duration: '3 مواسم',
     match: 95,
-    genres: ['Crime', 'Thriller'],
+    genres: ['جريمة', 'إثارة'],
     type: 'Series',
-    description:
-      'A burned-out detective hunts a phantom killer through the rain-soaked streets of a city that never sleeps.',
+    description: 'محقق منهك يطارد قاتلًا شبحيًا في شوارع مدينة لا تنام يغمرها المطر.',
   },
   {
     id: 'the-lantern',
-    name: 'The Lantern',
+    name: 'الفانوس',
     image: '/images/p2.png',
     year: 2024,
-    rating: '18+',
-    duration: '1h 48m',
+    rating: '+18',
+    duration: '1 س 48 د',
     match: 89,
-    genres: ['Horror', 'Mystery'],
+    genres: ['رعب', 'غموض'],
     type: 'Movie',
-    description:
-      'A girl returns to her grandmother’s forest cabin and discovers the lantern in the window has kept something out for decades.',
+    description: 'تعود فتاة إلى كوخ جدتها في الغابة لتكتشف أن الفانوس المعلّق في النافذة يُبقي شيئًا ما في الخارج منذ عقود.',
   },
   {
     id: 'dust-run',
-    name: 'Dust Run',
+    name: 'سباق الغبار',
     image: '/images/p3.png',
     year: 2026,
-    rating: '13+',
-    duration: '2h 02m',
+    rating: '+13',
+    duration: '2 س 02 د',
     match: 92,
-    genres: ['Action', 'Thriller'],
+    genres: ['أكشن', 'إثارة'],
     type: 'Movie',
-    description:
-      'One getaway driver. One canyon. Sixty minutes until sunset to outrun the most dangerous crew in the desert.',
+    description: 'سائق هروب واحد. وادٍ واحد. ستون دقيقة قبل الغروب للنجاة من أخطر عصابة في الصحراء.',
   },
   {
     id: 'rooftops',
-    name: 'Rooftops of Paris',
+    name: 'أسطح باريس',
     image: '/images/p4.png',
     year: 2025,
-    rating: '7+',
-    duration: '1h 36m',
+    rating: '+7',
+    duration: '1 س 36 د',
     match: 87,
-    genres: ['Romance', 'Comedy'],
+    genres: ['رومانسي', 'كوميديا'],
     type: 'Movie',
-    description:
-      'Two strangers locked out on the same Paris rooftop spend one long, hilarious night figuring out how to get down.',
+    description: 'غريبان يُحبسان على سطح المبنى نفسه في باريس، فيقضيان ليلة طويلة ومضحكة في البحث عن طريق للنزول.',
   },
   {
     id: 'emberfall',
-    name: 'Emberfall',
+    name: 'سقوط الجمر',
     image: '/images/p5.png',
     year: 2026,
-    rating: '16+',
-    duration: '2 Seasons',
+    rating: '+16',
+    duration: 'موسمان',
     match: 97,
-    genres: ['Fantasy', 'Epic'],
+    genres: ['فانتازيا', 'ملحمي'],
     type: 'Series',
-    description:
-      'The last knight of a fallen order climbs the storm peaks to bargain with the dragon who burned her kingdom.',
+    description: 'آخر فارسة من طائفة منهارة تتسلق قمم العواصف لتساوم التنين الذي أحرق مملكتها.',
   },
   {
     id: 'abyssal',
-    name: 'Abyssal',
+    name: 'الأعماق',
     image: '/images/p6.png',
     year: 2025,
-    rating: '13+',
-    duration: '1h 58m',
+    rating: '+13',
+    duration: '1 س 58 د',
     match: 91,
-    genres: ['Sci-Fi', 'Thriller'],
+    genres: ['خيال علمي', 'إثارة'],
     type: 'Movie',
-    description:
-      'A deep-sea crew finds a city older than humanity at the bottom of the ocean — and it is still powered on.',
+    description: 'طاقم أعماق البحار يعثر في قاع المحيط على مدينة أقدم من البشرية، ولا تزال تعمل.',
   },
   {
     id: 'high-ghosts',
-    name: 'Ghosts of the High Peaks',
+    name: 'أشباح القمم العالية',
     image: '/images/p7.png',
     year: 2024,
-    rating: 'All',
-    duration: '1 Season',
+    rating: 'للجميع',
+    duration: 'موسم واحد',
     match: 94,
-    genres: ['Documentary', 'Nature'],
+    genres: ['وثائقي', 'طبيعة'],
     type: 'Series',
-    description:
-      'A year in the life of the elusive snow leopard, filmed across the most remote ridges of the Himalayas.',
+    description: 'عام كامل في حياة نمر الثلوج المراوغ، صُوّر عبر أبعد سلاسل جبال الهيمالايا.',
   },
   {
     id: 'zero-day',
-    name: 'Zero Day',
+    name: 'اليوم صفر',
     image: '/images/p8.png',
     year: 2026,
-    rating: '16+',
-    duration: '2 Seasons',
+    rating: '+16',
+    duration: 'موسمان',
     match: 93,
-    genres: ['Tech', 'Thriller'],
+    genres: ['تقنية', 'إثارة'],
     type: 'Series',
-    description:
-      'Five hackers have 72 hours to stop a cyberattack they accidentally started.',
+    description: 'أمام خمسة قراصنة 72 ساعة لإيقاف هجوم إلكتروني أطلقوه عن طريق الخطأ.',
   },
 ]
 
 const byIds = (ids: string[]) => ids.map((id) => titles.find((t) => t.id === id)!)
 
 export const rows: { label: string; items: Title[] }[] = [
-  { label: 'Trending Now', items: byIds(['emberfall', 'neon-rain', 'dust-run', 'zero-day', 'abyssal']) },
-  { label: 'New on Netfly', items: byIds(['zero-day', 'dust-run', 'emberfall', 'rooftops', 'high-ghosts']) },
-  { label: 'Thrillers', items: byIds(['abyssal', 'neon-rain', 'the-lantern', 'zero-day', 'dust-run']) },
-  { label: 'Feel-Good & Nature', items: byIds(['rooftops', 'high-ghosts', 'emberfall', 'abyssal']) },
+  { label: 'الأكثر رواجًا الآن', items: byIds(['emberfall', 'neon-rain', 'dust-run', 'zero-day', 'abyssal']) },
+  { label: 'جديد على Netfly', items: byIds(['zero-day', 'dust-run', 'emberfall', 'rooftops', 'high-ghosts']) },
+  { label: 'أفلام ومسلسلات الإثارة', items: byIds(['abyssal', 'neon-rain', 'the-lantern', 'zero-day', 'dust-run']) },
+  { label: 'أعمال مُبهجة وطبيعة', items: byIds(['rooftops', 'high-ghosts', 'emberfall', 'abyssal']) },
 ]
 
 export const allTitles = [featured, ...titles]

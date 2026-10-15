@@ -16,18 +16,18 @@ export function SearchView({ onSelect }: { onSelect: (t: Title) => void }) {
     <main className="px-4 pb-28 pt-[calc(env(safe-area-inset-top)+1rem)]">
       <label className="flex items-center gap-2 rounded-md bg-muted px-3 py-2.5">
         <Search className="size-5 text-muted-foreground" aria-hidden />
-        <span className="sr-only">Search titles</span>
+        <span className="sr-only">ابحث عن الأعمال</span>
         <input
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search shows, movies, genres"
+          placeholder="ابحث عن مسلسلات، أفلام، تصنيفات"
           className="w-full bg-transparent text-base outline-none placeholder:text-muted-foreground"
         />
       </label>
-      <h2 className="mb-3 mt-6 text-lg font-bold">{q ? `Results for "${query.trim()}"` : 'Top Searches'}</h2>
+      <h2 className="mb-3 mt-6 text-lg font-bold">{q ? `نتائج البحث عن «${query.trim()}»` : 'الأكثر بحثًا'}</h2>
       {results.length === 0 ? (
-        <p className="py-12 text-center text-sm text-muted-foreground">No titles match your search.</p>
+        <p className="py-12 text-center text-sm text-muted-foreground">لا توجد أعمال مطابقة لبحثك.</p>
       ) : (
         <ul className="grid grid-cols-3 gap-2">
           {results.map((t) => (

@@ -6,7 +6,9 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Netfly',
     short_name: 'Netfly',
-    description: 'Stream movies and series on your iPhone.',
+    description: 'شاهد الأفلام والمسلسلات على جهاز iPhone.',
+    lang: 'ar',
+    dir: 'rtl',
     start_url: '/',
     display: 'standalone',
     orientation: 'portrait',

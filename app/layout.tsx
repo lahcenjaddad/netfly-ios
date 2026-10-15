@@ -1,10 +1,13 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Cairo } from 'next/font/google'
 import './globals.css'
 
+const cairo = Cairo({ subsets: ['arabic', 'latin'], display: 'swap' })
+
 export const metadata: Metadata = {
-  title: 'Netfly – Movies & Series',
-  description: 'Stream movies and series on your iPhone. Install Netfly to your home screen for a full-screen app experience.',
+  title: 'Netfly – أفلام ومسلسلات',
+  description: 'شاهد الأفلام والمسلسلات على جهاز iPhone. ثبّت Netfly على الشاشة الرئيسية لتجربة تطبيق بملء الشاشة.',
   generator: 'v0.app',
   applicationName: 'Netfly',
   appleWebApp: {
@@ -34,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark bg-black">
-      <body className="font-sans antialiased">
+    <html lang="ar" dir="rtl" className="dark bg-black">
+      <body className={`${cairo.className} antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
